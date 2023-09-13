@@ -1,0 +1,26 @@
+.account-summary-heading{
+    margin-top: 60px;
+    margin-left: 20px;
+}
+.account-summary{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.account-summary-items{
+    width: 19vw;
+    height: 11vh;
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 5px 2px 5px 2px lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.items-text{
+    margin-right: 10px;
+}
+.items-logo{
+    margin-left: 10px;
+}

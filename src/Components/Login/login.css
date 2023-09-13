@@ -1,0 +1,39 @@
+.login{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.allInputs{
+    padding: 5px;
+    border: 1px solid #a5a1a1;
+    border-radius: 5px;
+    padding: 40px;
+    background-color: #fff;
+}
+.inputs{
+    padding: 5px;
+    margin: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #cecaca;
+    height: 30px;
+}
+.submitBtn{
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #cecaca;
+}
+.submitBtn:hover{
+    cursor: pointer;
+    background-color: #e9e4e4;
+}
+h1{
+    text-align: center;
+}
+.btn{
+    display: flex;
+    justify-content: space-around;
+}

@@ -42,7 +42,7 @@ function Login() {
                     navigate('/profile');
                     localStorage.setItem("userEmail", userEmail);
                 })
-                .catch(err => console.log("err:", err));
+                .catch(_ => alert("Incorrect Email or Password"));
         }
 
     }

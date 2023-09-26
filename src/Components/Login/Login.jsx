@@ -16,7 +16,7 @@ function Login() {
             setLogin(true);
             navigate("/profile");
         }
-        else if(localStorage.getItem("adminEmail")){
+        else if (localStorage.getItem("adminEmail")) {
             navigate("/admin");
         }
     }, []);
@@ -37,21 +37,20 @@ function Login() {
         else {
             axios.post(url, userData)
                 .then(res => {
-                    console.log(res.data);
+                    localStorage.setItem("userId", res.data);
                     setLogin(true);
                     navigate('/profile');
                     localStorage.setItem("userEmail", userEmail);
                 })
                 .catch(_ => alert("Incorrect Email or Password"));
         }
-
     }
     const loginAsAdmin = () => {
-        if(userEmail === "admin@admin.com" && password === "admin123"){
+        if (userEmail === "admin@admin.com" && password === "admin123") {
             navigate('/admin');
             localStorage.setItem("adminEmail", "admin@admin.com");
         }
-        else{
+        else {
             alert("Admin's Email is: 'admin@admin.com'");
             alert("Admin's Password is: 'admin123'");
         }

@@ -36,13 +36,9 @@ function AdminShipments() {
         }
     };
 
-    const deleteShipment = async (shipmentId) => {
-        try {
-            await axios.delete(`http://localhost:5000/shipments/${shipmentId}`);
+    const deleteShipment =  (shipmentId) => {
+            axios.delete(`http://localhost:5000/shipments/${shipmentId}`);
             fetchShipments();
-        } catch (error) {
-            console.error("Error deleting shipment:", error);
-        }
     }
 
     const editShipment = (shipmentId) => {

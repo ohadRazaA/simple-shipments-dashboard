@@ -13,6 +13,7 @@ function Navbar() {
     }
     const logout = () => {
         localStorage.removeItem("userEmail");
+        localStorage.removeItem("userId");
         setLogin(false);
         navigate("/login");
     }

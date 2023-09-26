@@ -16,7 +16,7 @@ function Auth() {
     return (
         <div>
             {
-                login && localStorage.getItem("userEmail") ?
+                login && localStorage.getItem("userId") ?
                     <Dashboard /> :
                     <h1>Please, first do Signup / Login</h1>
             }

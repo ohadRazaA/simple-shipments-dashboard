@@ -10,7 +10,7 @@ route.post('/', async (req, res) => {
 
     if (myUserFound) {
         if (myUserFound.password === password && myUserFound.email === userEmail) {
-            res.json({ message: 'Authentication successful' });
+            res.send(myUserFound._id);
         } else {
             res.status(401).json({ message: 'Authentication failed' });
         }
@@ -18,6 +18,6 @@ route.post('/', async (req, res) => {
         res.status(404).json({ message: 'User not found' });
     }
 
-})
+});
 
 module.exports = route;

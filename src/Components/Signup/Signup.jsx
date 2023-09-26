@@ -11,7 +11,7 @@ function Signup() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
-    const { data, setLogin } = useData();
+    const { data, setData, setLogin } = useData();
     const url = "http://localhost:5000/user/";
 
     useEffect(() => {
@@ -19,7 +19,7 @@ function Signup() {
             setLogin(true);
             navigate("/profile");
         }
-        else if(localStorage.getItem("adminEmail")){
+        else if (localStorage.getItem("adminEmail")) {
             navigate("/admin");
         }
     }, []);
@@ -40,10 +40,13 @@ function Signup() {
                 password
             });
             axios.post(url, { email, password, firstName, lastName })
-                .then((res) => { console.log(res.data) })
+                .then((res) => {
+                    console.log(res.data);
+                    localStorage.setItem("userId", res.data._id);
+                })
                 .catch((error) => { console.log("Error:", error); });
             navigate('/login');
-            localStorage.setItem("userEmail", email)
+            // localStorage.setItem("userEmail", email);
         }
 
     }

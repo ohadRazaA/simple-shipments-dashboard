@@ -14,7 +14,7 @@ route.post("/", async (req, res) => {
     );
     try {
         const dataToSave = await myUser.save();
-        res.send("form Sumbitted");
+        res.send(dataToSave);
     }
     catch (error) {
         res.status(400).json({ message: error.message })
